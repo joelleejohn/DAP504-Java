@@ -1,3 +1,14 @@
-com\tabletennissimulator\App.class
-module-info.class
+com\tabletennissimulator\TableTennisPlayerState.class
+com\tabletennissimulator\AppController.class
+com\tabletennissimulator\TableTennisPlayer.class
+com\tabletennissimulator\Tournament.class
 com\tabletennissimulator\SystemInfo.class
+com\tabletennissimulator\Round.class
+com\tabletennissimulator\Playable.class
+com\tabletennissimulator\Round$1.class
+com\tabletennissimulator\App.class
+com\tabletennissimulator\MatchController.class
+module-info.class
+com\tabletennissimulator\TableTennisMatch.class
+com\tabletennissimulator\Player.class
+com\tabletennissimulator\Round$1$1.class

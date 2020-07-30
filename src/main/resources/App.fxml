@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="root" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="800.0" prefWidth="1800.0" stylesheets="@App.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tabletennissimulator.AppController">
+   <children>
+      <GridPane id="centerGrid" alignment="CENTER" layoutY="89.0" maxHeight="-Infinity" maxWidth="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="681.0" prefWidth="1801.0" AnchorPane.leftAnchor="0.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="670.0" minWidth="10.0" prefWidth="321.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="1309.0" minWidth="10.0" prefWidth="1153.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <VBox alignment="TOP_CENTER" nodeOrientation="LEFT_TO_RIGHT" prefHeight="681.0" prefWidth="827.0" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+               <children>
+                  <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="200.0" spacing="20.0">
+                     <children>
+                        <Label prefHeight="18.0" prefWidth="200.0" text="Number of Players">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Calibri" size="15.0" />
+                           </font>
+                        </Label>
+                        <ChoiceBox id="numPlayers" fx:id="numPlayers" prefWidth="200.0">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </ChoiceBox>
+                        <Button fx:id="simulate" mnemonicParsing="false" onAction="#handleSimulate" text="Simulate">
+                           <VBox.margin>
+                              <Insets left="-125.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font name="Calibri" size="14.0" />
+                           </font>
+                        </Button>
+                        <Label fx:id="error" contentDisplay="CENTER" prefHeight="50.0" prefWidth="200.0" text="ERROR!" textFill="#ff3f3f" visible="false" />
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <ScrollPane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <content>
+                  <HBox fx:id="roundContainer" alignment="TOP_CENTER" prefHeight="678.0" prefWidth="1302.0" />
+               </content>
+            </ScrollPane>
+         </children>
+      </GridPane>
+      <Label id="titleCard" layoutX="65.0" layoutY="14.0" prefHeight="65.0" prefWidth="396.0" styleClass="titleCard" text="Table Tennis Tournament Sim 2020" textOverrun="CLIP">
+         <font>
+            <Font name="Candara" size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
