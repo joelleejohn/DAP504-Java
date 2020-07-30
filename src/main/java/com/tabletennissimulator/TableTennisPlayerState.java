@@ -15,7 +15,7 @@ public class TableTennisPlayerState {
      */
     public TableTennisPlayerState(TableTennisPlayer statePlayer){
         this.player = statePlayer;
-        Platform.runLater(() -> playerInfo.setValue(player.getPlayerInformation()));
+        Platform.runLater(()->playerInfo.setValue(player.getPlayerInformation()));
     }
 
     /**
@@ -57,7 +57,7 @@ public class TableTennisPlayerState {
      * Updates the player information for the GUI
      */
     public void updatePlayerInfo(){
-        Platform.runLater(()->gameInfo.setValue(gamesWon + " (" + score + ")"));
+        Platform.runLater(() -> gameInfo.setValue(gamesWon + " (" + score + ")"));
     }
 
     /**

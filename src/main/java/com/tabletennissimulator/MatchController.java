@@ -8,25 +8,50 @@ import javafx.scene.layout.Pane;
 
 import java.io.IOException;
 
-public class MatchController extends Pane implements Playable {
+/**
+ * A custom FXML component that displays formatted information about a match
+ */
+public class MatchController extends Pane {
 
+    /**
+     * The match that this component is bound to
+     */
     public Match matchState;
 
+    /**
+     * The Grid Pane of the MatchController component in which all major components reside
+     */
     @FXML
     public GridPane match;
 
+    /**
+     * The Label of the MatchController component that provides information about the upper bracket player
+     */
     @FXML
     public Label upperPlayerInfo;
 
+    /**
+     * The Label of the MatchController component that provides information about the lower bracket player
+     */
     @FXML
     public Label lowerPlayerInfo;
 
+    /**
+     * The Label of the MatchController component that provides information about the upper bracket player's game score
+     */
     @FXML
     public Label upperGamesWon;
 
+    /**
+     * The Label of the MatchController component that provides information about the lower bracket player's game score
+     */
     @FXML
     public Label lowerGamesWon;
 
+    /**
+     * Creates a new instance that can be loaded onto the UI
+     * @param newMatch The match that the control will be bound to
+     */
     public MatchController(Match newMatch) {
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(
                 "/Match.fxml"));
@@ -45,12 +70,5 @@ public class MatchController extends Pane implements Playable {
         lowerPlayerInfo.textProperty().bind(matchState.lowerPlayerInfo);
         upperGamesWon.textProperty().bind(matchState.upperPlayerState.gameInfo);
         lowerGamesWon.textProperty().bind(matchState.lowerPlayerState.gameInfo);
-    }
-
-
-    @Override
-    public Object play() throws InterruptedException {
-        matchState.play();
-        return null;
     }
 }

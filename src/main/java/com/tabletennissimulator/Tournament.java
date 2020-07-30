@@ -18,7 +18,6 @@ public class Tournament {
 
     private ArrayList<TableTennisPlayer> players;
 
-    private ArrayList<Match> current
     /**
      * Starts the tournament by creating the first round and playing it
      * @param players all the possible players in the tournament
@@ -34,7 +33,7 @@ public class Tournament {
 
         HashMap<Integer, ArrayList<TableTennisPlayer>> playerPairs = new HashMap<>();
 
-        for (int currentIndex = 0; currentIndex < (numberOfPlayers / 2) - 1; currentIndex++) {
+        for (int currentIndex = 0; currentIndex < (numberOfPlayers / 2); currentIndex++) {
             int offset = players.size() - numberOfPlayers;
             int matchupIndex = (players.size() - 1) - currentIndex;
 
@@ -48,33 +47,33 @@ public class Tournament {
         currentRoundIndex = 1;
 
         roundHashMap.put(1, new Round(playerPairs, roundContainer));
+
+        play();
     }
 
     private void play(){
-
+        System.out.println("Round started");
         // Get the current round
         Round currentRound = roundHashMap.get(currentRoundIndex);
 
         // Play the round
         HashMap<Integer, ArrayList<TableTennisPlayer>> playersLeft = currentRound.play();
+
+        // If there's only one player, return
+        if (playersLeft.size() == 1 && playersLeft.get(1).size() < 2){
+            return;
+        } else {
+            addRound(playersLeft);
+            play();
+        }
     }
 
     /**
      * Add a r
      */
     private void addRound(HashMap<Integer, ArrayList<TableTennisPlayer>> playersLeft) {
-
-        HashMap<Integer, ArrayList<TableTennisPlayer>> playerPairs = new HashMap<>();
-
-        playersLeft.forEach((index, pair) -> {
-            ArrayList<TableTennisPlayer> playerPair = new ArrayList<>();
-            playerPair.add(0, pair.get(0));
-            playerPair.add(1, players.get(matchupIndex - offset));
-            playerPairs.put(currentIndex + 1, playerPair);
-        });
-
         currentRoundIndex++;
-
-        roundHashMap.put(currentRoundIndex, new Round(matches, roundContainer));
+        System.out.println(playersLeft.get(1).get(1).getPlayerInformation());
+        roundHashMap.put(currentRoundIndex, new Round(playersLeft, roundContainer));
     }
 }

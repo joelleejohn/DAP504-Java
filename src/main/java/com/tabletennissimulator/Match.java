@@ -68,7 +68,6 @@ public class Match implements Playable {
      * Performs a rally
      * @param first the player to serve
      * @param second the player to return
-     * @return true if the games are over
      */
     private void rally(TableTennisPlayerState first, TableTennisPlayerState second) throws InterruptedException {
         // Weight the shot of the primary player against the second's shot quality

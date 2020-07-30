@@ -2,6 +2,7 @@ package com.tabletennissimulator;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
@@ -13,6 +14,9 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Comparator;
 
+/**
+ * Controller for the entire application, allows control of GUI elements
+ */
 public class AppController {
 
     private int numberOfRounds = 0;
@@ -81,9 +85,18 @@ public class AppController {
     }
 
     public void handleSimulate(){
+        Task t = new Task() {
+            @Override
+            protected Object call() throws Exception {
+                simulate.setDisable(true);
+                numPlayers.setDisable(true);
+                new Tournament(players, numPlayers.getValue(), roundContainer);
+                return null;
+            }
+        };
 
-        Round firstRound = Tournament.start(players, numPlayers.getValue(), numberOfRounds, roundContainer);
+        new Thread(t).start();
 
-        firstRound.play();
+
     }
 }

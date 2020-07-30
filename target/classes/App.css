@@ -7,5 +7,8 @@
     -fx-border-color: rgb(200, 200, 200);
     -fx-border-width: 1px;
     -fx-padding: 10px;
-    -fx-border-radius: 6px;
+    -fx-border-radius: 10px;
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-border-color: transparent;
 }
