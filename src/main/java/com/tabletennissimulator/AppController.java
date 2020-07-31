@@ -21,20 +21,31 @@ public class AppController {
 
     private int numberOfRounds = 0;
 
+    /**
+     * The container that rounds will be inserted into
+     */
     @FXML
     public HBox roundContainer;
 
+    /**
+     * The button that triggers the tournament simulator
+     */
     @FXML
     public Button simulate;
 
+    /**
+     * The the choice box that lets the user select the number of players in the tournament
+     */
     @FXML
     public ChoiceBox<Integer> numPlayers;
 
+    /**
+     * The error message label
+     */
     @FXML
     public Label error;
 
-    public ArrayList<TableTennisPlayer> players = new ArrayList<>();
-
+    private ArrayList<TableTennisPlayer> players = new ArrayList<>();
 
     /**
      * Initialize function that the fxml loader uses to initialize all the fields
@@ -53,17 +64,18 @@ public class AppController {
             error.setVisible(true);
             simulate.setDisable(true);
         }
-
-        numPlayers.setItems(getBaseTwo());
+        ObservableList<Integer> options = getBaseTwo();
+        numPlayers.setItems(options);
+        numPlayers.setValue(options.get(0));
 
     }
 
     /**
      * Tests if an integer is base 2
-     * @param x The integer to tests
+     * @param x The integer to test
      * @return True if the integer passed is base 2
      */
-    private Boolean isBaseTwo(int x) { return (x != 0) && ((x & (x - 1)) == 0); }
+    protected Boolean isBaseTwo(int x) { return (x != 0) && ((x & (x - 1)) == 0); }
 
     /**
      * Gets the base 2 options for the number of players to use in the simulation
@@ -84,7 +96,13 @@ public class AppController {
         return FXCollections.observableArrayList(numPlayersOption);
     }
 
+    /**
+     * Handle the clicking of the simulate button, this triggers the simulation of the Tournament
+     */
+    @FXML
     public void handleSimulate(){
+
+        // Run as a task so that the UI gets updated live
         Task t = new Task() {
             @Override
             protected Object call() throws Exception {
@@ -96,7 +114,5 @@ public class AppController {
         };
 
         new Thread(t).start();
-
-
     }
 }

@@ -40,6 +40,7 @@ public class Round implements Playable {
             ArrayList<TableTennisPlayer> pair = playerPairs.get(i);
             matches.put(i, new Match(pair.get(0), pair.get(1)));
         }
+
         Platform.runLater(() ->{
 
             ScrollPane scrollPane = new ScrollPane();
@@ -56,6 +57,7 @@ public class Round implements Playable {
                 // for each match, add a custom MatchController item.
                 mc.add(new MatchController(matchToAdd));
             }
+
             box.setPrefWidth(265);
             box.setAlignment(Pos.CENTER);
             box.getChildren().addAll(mc);

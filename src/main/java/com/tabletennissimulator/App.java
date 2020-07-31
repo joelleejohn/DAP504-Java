@@ -20,7 +20,11 @@ import java.nio.file.Paths;
  */
 public class App extends Application {
 
-    public Scene window;
+
+    /**
+     * The window ('scene') holding the application
+     */
+    private Scene window;
 
     public static void main(String[] args) {
         launch(args);
@@ -55,13 +59,17 @@ public class App extends Application {
         primaryStage.show();
     }
 
+    /**
+     * Gets the players
+     * @return the list of players found in the
+     * @throws FileNotFoundException Throws if the JSON file could not be found
+     */
     public static ArrayList<TableTennisPlayer> getPlayers() throws FileNotFoundException {
 
         // Use the Gson Builder to only serialize fields with the Expose annotation
         Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
 
         JsonReader jsonReader;
-
 
         try {
             jsonReader = new JsonReader(new FileReader("src/main/data/players-attributes.json"));
