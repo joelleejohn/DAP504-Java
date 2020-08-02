@@ -6,6 +6,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * A class representing a Table Tennis Tournament
+ */
 public class Tournament {
 
     final private HashMap<Integer, Round> roundHashMap = new HashMap<>();

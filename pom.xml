@@ -83,6 +83,13 @@
                     <descriptorRefs>
                         <descriptorRef>jar-with-dependencies</descriptorRef>
                     </descriptorRefs>
+                    <archive>
+                        <manifest>
+                            <MainClass>com.tabletennissimulator.Startup</MainClass>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>build/</classpathPrefix>
+                        </manifest>
+                    </archive>
                 </configuration>
             </plugin>
         </plugins>

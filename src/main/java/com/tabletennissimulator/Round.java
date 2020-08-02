@@ -31,8 +31,8 @@ public class Round implements Playable {
 
     /**
      * Creates a round instance and assigns the matches to a custom MatchController Component and updates the UI accordingly
-     * @param playerPairs
-     * @param container
+     * @param playerPairs Pairs of players to be assigned to matches in this round
+     * @param container The container that contains the round components
      */
     public Round(HashMap<Integer, ArrayList<TableTennisPlayer>> playerPairs, HBox container){
 

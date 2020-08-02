@@ -1,0 +1,4 @@
+--patch-module
+com.tabletennissimulator=_
+--add-reads
+com.tabletennissimulator=ALL-UNNAMED

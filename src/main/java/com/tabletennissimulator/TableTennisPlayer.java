@@ -45,15 +45,15 @@ public final class TableTennisPlayer extends Player {
 
     /**
      * Gets the player's server power
-     * @return
+     * @return The player's serve power
      */
     public int getServePower() {
         return servePower;
     }
 
     /**
-     * Gets the player's server skill
-     * @return
+     * Gets the player's serve skill
+     * @return The player's serve skill
      */
     public int getServeSkill() {
         return serveSkill;
@@ -61,7 +61,7 @@ public final class TableTennisPlayer extends Player {
 
     /**
      * Gets the player's ability to add spin to a shot
-     * @return
+     * @return The player's ability to add spin to a shot
      */
     public int getSpin() {
         return spin;
@@ -69,7 +69,7 @@ public final class TableTennisPlayer extends Player {
 
     /**
      * Gets the player's forehand power
-     * @return
+     * @return The player's forehand power
      */
     public int getForehandPower() {
         return forehandPower;
@@ -77,7 +77,7 @@ public final class TableTennisPlayer extends Player {
 
     /**
      * Gets the player's backhand power
-     * @return
+     * @return The player's backhand power
      */
     public int getBackhandPower() {
         return backhandPower;
@@ -101,6 +101,7 @@ public final class TableTennisPlayer extends Player {
 
     /**
      * Gets the player's overall rating
+     * @return The player's overall rating
      */
     public double getOverall() { return ((double)(fitness + spin + backhandPower + forehandPower) /  40d) * 100d; }
 
@@ -121,6 +122,9 @@ public final class TableTennisPlayer extends Player {
 
     /**
      * Get the quality of a shot
+     * @param bestOf The amount of games that the tournament is best of
+     * @param gameNumber the game number within a match-up
+     * @param hits the number of times the player has hit the ball in a rally
      * @return The quality of a shot
      */
     public double getHitQuality(int bestOf, int gameNumber, int hits){

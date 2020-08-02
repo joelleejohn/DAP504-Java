@@ -49,6 +49,7 @@ public class AppController {
 
     /**
      * Initialize function that the fxml loader uses to initialize all the fields
+     * @throws FileNotFoundException if no json file with the name players-attributes is found
      */
     @FXML
     public void initialize() throws FileNotFoundException {
