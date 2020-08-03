@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="5" failures="0" name="TestSuite" time="0.011" errors="0" skipped="0">
+<testsuite tests="5" failures="0" name="TestSuite" time="0.01" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2020.2"/>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
@@ -46,7 +46,7 @@
     <property name="java.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2020.2\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2020.2\plugins\maven\lib\maven3\boot\plexus-classworlds.license"/>
     <property name="java.vm.specification.version" value="11"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2020.2 clean assembly:assembly"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2020.2 assembly:assembly"/>
     <property name="java.home" value="C:\Program Files\Java\jdk-11.0.7"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -64,9 +64,9 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.tabletennissimulator.AppControllerTest" name="testIsBaseTwo" time="0.005"/>
+  <testcase classname="com.tabletennissimulator.AppControllerTest" name="testIsBaseTwo" time="0.006"/>
   <testcase classname="com.tabletennissimulator.TableTennisPlayerTest" name="testGetOverall" time="0"/>
-  <testcase classname="com.tabletennissimulator.TableTennisPlayerTest" name="testGetPlayerInformation" time="0.002"/>
+  <testcase classname="com.tabletennissimulator.TableTennisPlayerTest" name="testGetPlayerInformation" time="0.001"/>
   <testcase classname="com.tabletennissimulator.TableTennisPlayerTest" name="testHitRating" time="0"/>
-  <testcase classname="com.tabletennissimulator.AppTest" name="testGetPlayers" time="0.004"/>
+  <testcase classname="com.tabletennissimulator.AppTest" name="testGetPlayers" time="0.003"/>
 </testsuite>

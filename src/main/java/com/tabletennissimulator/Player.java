@@ -29,5 +29,7 @@ public abstract class Player {
      * Gets formatted information about this player
      * @return Formatted information about this player
      */
-    public abstract String getPlayerInformation();
+    public String getPlayerInformation(){
+        return firstName + " " + lastName;
+    };
 }

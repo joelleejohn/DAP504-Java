@@ -9,7 +9,7 @@ import java.util.Map;
 /**
  * A class representing a Table Tennis Tournament
  */
-public class Tournament {
+public class Tournament implements Playable {
 
     final private HashMap<Integer, Round> roundHashMap = new HashMap<>();
 
@@ -54,7 +54,7 @@ public class Tournament {
         play();
     }
 
-    private void play(){
+    public Object play(){
         System.out.println("Round started");
         // Get the current round
         Round currentRound = roundHashMap.get(currentRoundIndex);
@@ -64,11 +64,12 @@ public class Tournament {
 
         // If there's only one player, return
         if (playersLeft.size() == 1 && playersLeft.get(1).size() < 2){
-            return;
+            return null;
         } else {
             addRound(playersLeft);
             play();
         }
+        return this;
     }
 
     /**

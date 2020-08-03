@@ -129,7 +129,7 @@ public final class TableTennisPlayer extends Player {
      */
     public double getHitQuality(int bestOf, int gameNumber, int hits){
         double hitRating = getHitRating();
-        double fitnessPenalty = getFitnessPenalty(3, 1, hits);
+        double fitnessPenalty = getFitnessPenalty(3, gameNumber, hits);
         return hitRating - (hitRating * fitnessPenalty);
     }
 
