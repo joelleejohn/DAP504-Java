@@ -54,6 +54,10 @@ public class Tournament implements Playable {
         play();
     }
 
+    /**
+     * Plays the tournament
+     * @return return null
+     */
     public Object play(){
         System.out.println("Round started");
         // Get the current round
@@ -73,7 +77,8 @@ public class Tournament implements Playable {
     }
 
     /**
-     * Add a r
+     * Add a round
+     * @param playersLeft Players remaining in the tournament
      */
     private void addRound(HashMap<Integer, ArrayList<TableTennisPlayer>> playersLeft) {
         currentRoundIndex++;

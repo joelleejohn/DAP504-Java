@@ -41,6 +41,5 @@ public class TableTennisPlayerTest {
     @Test
     public void testGetPlayerInformation(){
         Assert.assertEquals(player.getPlayerInformation(), "Arturo Ailsun (OVR: 85)");
-        player.id
     }
 }

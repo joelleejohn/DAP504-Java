@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","url":"allpackages-index.html"},{"m":"com.tabletennissimulator","l":"com.tabletennissimulator"}]

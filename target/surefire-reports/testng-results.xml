@@ -2,32 +2,32 @@
 <testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-08-02T17:37:51Z" name="Command line suite" finished-at="2020-08-02T17:37:51Z" duration-ms="25">
+  <suite started-at="2020-08-04T00:08:54Z" name="Command line suite" finished-at="2020-08-04T00:08:54Z" duration-ms="44">
     <groups>
     </groups>
-    <test started-at="2020-08-02T17:37:51Z" name="Command line test" finished-at="2020-08-02T17:37:51Z" duration-ms="25">
+    <test started-at="2020-08-04T00:08:54Z" name="Command line test" finished-at="2020-08-04T00:08:54Z" duration-ms="44">
       <class name="com.tabletennissimulator.AppControllerTest">
-        <test-method signature="testIsBaseTwo()[pri:0, instance:com.tabletennissimulator.AppControllerTest@55182842]" started-at="2020-08-02T17:37:51Z" name="testIsBaseTwo" finished-at="2020-08-02T17:37:51Z" duration-ms="5" status="PASS">
+        <test-method signature="testIsBaseTwo()[pri:0, instance:com.tabletennissimulator.AppControllerTest@55182842]" started-at="2020-08-04T00:08:54Z" name="testIsBaseTwo" finished-at="2020-08-04T00:08:54Z" duration-ms="8" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testIsBaseTwo -->
       </class> <!-- com.tabletennissimulator.AppControllerTest -->
       <class name="com.tabletennissimulator.TableTennisPlayerTest">
-        <test-method signature="testGetPlayerInformation()[pri:0, instance:com.tabletennissimulator.TableTennisPlayerTest@235834f2]" started-at="2020-08-02T17:37:51Z" name="testGetPlayerInformation" finished-at="2020-08-02T17:37:51Z" duration-ms="2" status="PASS">
+        <test-method signature="testGetPlayerInformation()[pri:0, instance:com.tabletennissimulator.TableTennisPlayerTest@235834f2]" started-at="2020-08-04T00:08:54Z" name="testGetPlayerInformation" finished-at="2020-08-04T00:08:54Z" duration-ms="3" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetPlayerInformation -->
-        <test-method signature="testGetOverall()[pri:0, instance:com.tabletennissimulator.TableTennisPlayerTest@235834f2]" started-at="2020-08-02T17:37:51Z" name="testGetOverall" finished-at="2020-08-02T17:37:51Z" duration-ms="0" status="PASS">
+        <test-method signature="testGetOverall()[pri:0, instance:com.tabletennissimulator.TableTennisPlayerTest@235834f2]" started-at="2020-08-04T00:08:54Z" name="testGetOverall" finished-at="2020-08-04T00:08:54Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetOverall -->
-        <test-method signature="testHitRating()[pri:0, instance:com.tabletennissimulator.TableTennisPlayerTest@235834f2]" started-at="2020-08-02T17:37:51Z" name="testHitRating" finished-at="2020-08-02T17:37:51Z" duration-ms="1" status="PASS">
+        <test-method signature="testHitRating()[pri:0, instance:com.tabletennissimulator.TableTennisPlayerTest@235834f2]" started-at="2020-08-04T00:08:54Z" name="testHitRating" finished-at="2020-08-04T00:08:54Z" duration-ms="0" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testHitRating -->
       </class> <!-- com.tabletennissimulator.TableTennisPlayerTest -->
       <class name="com.tabletennissimulator.AppTest">
-        <test-method signature="testGetPlayers()[pri:0, instance:com.tabletennissimulator.AppTest@3270d194]" started-at="2020-08-02T17:37:51Z" name="testGetPlayers" finished-at="2020-08-02T17:37:51Z" duration-ms="3" status="PASS">
+        <test-method signature="testGetPlayers()[pri:0, instance:com.tabletennissimulator.AppTest@3270d194]" started-at="2020-08-04T00:08:54Z" name="testGetPlayers" finished-at="2020-08-04T00:08:54Z" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testGetPlayers -->
